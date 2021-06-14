@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navgraph"
+    app:startDestination="@id/navigation_dashboard">
+
+    <fragment
+        android:id="@+id/navigation_dashboard"
+        android:name="com.qualitestudios.memorr.ui.dashboard.DashboardFragment"
+        android:label="Memorr"
+        tools:layout="@layout/dashboard_fragment" >
+        <action
+            android:id="@+id/action_navigation_dashboard_to_createMemoryFragment"
+            app:destination="@id/createMemoryFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_pop_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_memories"
+        android:name="com.qualitestudios.memorr.ui.importantmemories.ImportantMemories"
+        android:label="Timeline"
+        tools:layout="@layout/important_memories_fragment">
+        <action
+            android:id="@+id/action_navigation_memories_to_createMemoryFragment"
+            app:destination="@id/createMemoryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/createMemoryFragment"
+        android:name="com.qualitestudios.memorr.ui.creatememories.CreateMemoryFragment"
+        android:label="Memory"
+        tools:layout="@layout/create_memory_fragment">
+        <action
+            android:id="@+id/action_createMemoryFragment_to_navigation_dashboard2"
+            app:destination="@id/navigation_dashboard" />
+        <argument
+            android:name="memoryData"
+            app:argType="com.qualitestudios.memorr.ui.dashboard.memoriesrecyclerview.each_data_sealed$each_data_sealed_value"
+            app:nullable="true" />
+        <argument
+            android:name="selectedDateq"
+            app:argType="string"
+            app:nullable="true" />
+
+    </fragment>
+</navigation>

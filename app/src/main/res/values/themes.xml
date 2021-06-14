@@ -1,0 +1,24 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Memorr" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">#4caf50</item>
+
+        <item name="colorPrimaryVariant">#80e27e</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">#2979ff</item>
+        <item name="colorSecondaryVariant">#75a7ff</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">#4caf50</item>
+        <item name="android:navigationBarColor">#000000</item>
+        <item name="android:windowLightStatusBar">true</item>
+        ,item
+        <item name='titleTextColor'>#000000</item>
+
+
+        <item name="android:windowLightNavigationBar">false</item>
+        <!-- Customize your theme here. -->
+    </style>
+</resources>
